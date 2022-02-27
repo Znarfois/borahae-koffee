@@ -21,6 +21,19 @@ class Event(models.Model):
     EventTime = models.TimeField()
     #Status with DtypeENUM to be made pa as a subclass :)
 
+class Reservation(models.Model):
+    ReservationNum = models.PositiveSmallIntegerField(
+        primary_key=True)
+    ReservationDate = models.DateField()
+    ReservationTimeSlot = models.TimeField()
+    ReservationNumberOfPeople = models.PositiveSmallIntegerField()
+    ReservationConfirmationStatus = models.BooleanField()
+    ReservationAttendance = models.BooleanField()
+    EventID = models.ForeignKey(Event, on_delete=models.CASCADE)
+    username = models.ForeignKey(Accounts, on_delete=models.CASCADE)
+
+
+
 #Class Reservation
 #Class Reservation Additional Detail
 #Class Feedback
