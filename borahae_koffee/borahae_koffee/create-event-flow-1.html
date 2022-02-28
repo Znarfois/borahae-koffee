@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="" />
+        <meta property="og:title" content="Borahae Cafe" />
+        <meta developer="Franz Taborlupa" site="https://github.com/Znarfois">
+        <title>Borahae Cafe</title>
+        <link rel="stylesheet" href="event.css"/>
+    </head>
+    <body>
+        <!-- <nav>
+        </nav> -->
+        <img src="Assets/Blob.png" alt="" id="blob_1">
+        <img src="Assets/Blob_2.png" alt="" id="blob_2">
+        <form method="POST" id="create_event">
+            <!-- Get h1 and description from  -->
+            <h1>My Event details</h1>
+            <p>Event Title</p>
+            <input type="text" name="event_title" placeholder="ex. My Universe">
+            <p>Event Description</p>
+            <textarea name="event_description" placeholder="Description here"></textarea>
+            <div id="dates">
+                <div id="left">
+                    <p>Start Date & Time</p>
+                    <input type="datetime-local" name="event_start_datetime" value="">
+                </div>
+                <div id="right">
+                    <p>End Date & Time</p>
+                    <input type="datetime-local" name="event_end_datetime" value="">
+                </div>
+            </div>
+            <p>Expected number of participants</p>
+            <input type="number" name="participants" id="participants" placeholder="ex. 60">
+            <!-- <input type="text" name="full_name" value="Full Name">
+            <input type="text" name="phone_number" value="Phone Number">
+            <input type="email" name="reservation_email" value="email"> -->
+            <div id="buttons">
+                <button type="button" id="back-btn">
+                    <a href="index.html">
+                        Back
+                    </a>
+                </button>
+                <button type="submit" id="submit-btn">
+                    Next
+                </button>
+            </div>
+        </form>
+        <img src="Assets/progress 1.png" alt="" id="progress">
+        <!-- <footer>
+        </footer> -->
+
+    </body>
+</html>
