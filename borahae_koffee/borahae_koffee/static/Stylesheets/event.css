@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url("Assets/Background.png");
+    background-image: url("../Assets/Background.png");
     height: 100vh;
     display: flex;
     align-items: center;
@@ -73,7 +73,7 @@ input, textarea {
 }
 
 #participants {
-    width: 48px;
+    width: 56px;
 }
 
 #dates {
