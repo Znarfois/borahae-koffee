@@ -1,0 +1,23 @@
+{% extends 'myinventoryapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="col-12">
+			{% for b in create_feedback %}
+			<tr>
+				#//<td><a href="{% url 'view_bottle' pk=b.pk %}"> {{ b.sku }} - {{ b.brand }} </a></td>
+				<td> {{ <b class="title"></b> }} </td>
+				<input type="text" id="title" name="title" size="70"><br><br>
+				<td> {{ <b class="q1"></b> }} </td>
+				<input type="text" id="q1" name="q1" size="70"><br><br>
+				<td> {{ <b class="q3"></b> }} </td>
+				<input type="text" id="q1" name="q1" size="70"><br><br>
+				<td> {{ <b class="title"></b> }} </td>
+				<input type="text" id="q1" name="q1" size="70"><br><br>
+				<td> {{ b.qty }} </td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endblock %}

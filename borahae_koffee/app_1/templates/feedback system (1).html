@@ -1,0 +1,33 @@
+{% extends 'borahae-koffee/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="col-md-8">
+
+	<div class="card">
+		<div class="card-header">
+			<h5 class="card-title"> Create feedback form </h5>
+		</div>
+
+		<div class="card-body">
+			<form action="/action_page.php">
+				<label for="title">Feedback form Title:</label>
+				<input type="text" id="title" name=" title size=4"><br><br>
+				<label for="q1">Input question 1:</label>
+				<input type="text" id="q1" name="q1 size=4"><br><br>
+				<div class="input_fields_wrap">
+					<button class="add_field_button">Add More Questions</button>
+					<div><input type="text" name="mytext[]"></div>
+				</div>
+				<a href="{% url '_____' %}" style="color:#1C2833"><b class="add option">Add</b></a>
+
+
+			  </form>
+
+			<p>
+				<a href="{% url 'feedback_form'%}"  class="btn btn-success">Create</a>
+			</p>
+		</div>
+	</div>
+</div>
+{% endblock %}
