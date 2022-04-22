@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Reservation Form</title>
+    <link rel="stylesheet" href="{% static 'static/Stylesheets/createrev.css %'}"/>
+</head>
+<body>
+    <img src="resources/vectoru.png" id="blob_1">
+    <img src="resources/vectord.png" id="blob_2">
+    <form method="POST" id="create reservation form">
+        <h1>My Universe Cupsleeve Event</h1>
+        <p>Join us at Borahae Cafe Davao as we celebrate My Universe Cupsleeve Event on Month Date, Year! To secure
+            your chosen time slot, please fill in the following details.
+        </p>
+        <div>
+            <div class="dropdown">
+                <button class="dropbtn">button</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+            <input name="event_description" placeholder="Name"></input>
+        </div>
+        <div>
+            <div class="dropdown">
+                <button class="dropbtn">button</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+            <input name="event_description" placeholder="Phone Number"></input>
+            <img src="resources/minus.png" id="minus">
+        </div>
+        <div>
+            <div class="dropdown">
+                <button class="dropbtn">button</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+            <input name="event_description" placeholder="Email"></input>
+            <img src="resources/minus.png" id="minus">
+        </div>       
+        <div id="button">
+            <button type="button" id="back-btn">
+                <a href="#">
+                    Back
+                </a>
+            </button>
+            <button type="submit" id="submit-btn">
+                Next
+            </button>
+        </div>
+    </form>
+
+</body>
+</html>
