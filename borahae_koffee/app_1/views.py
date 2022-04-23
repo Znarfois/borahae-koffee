@@ -9,3 +9,9 @@ def sample_view(request):
 
 def create_event(request):
     return render(request, 'app_1/create-event-flow-1.html')
+
+def create_reservation(request):
+    return render(request, 'app_1/createrev.html')
+
+def my_events(request):
+    return render(request, 'app_1/MyEvents.html')
