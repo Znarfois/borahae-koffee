@@ -6,14 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Events</title>
-    <link rel="stylesheet" href="{% static 'static/Stylesheets/MyEvents.css %'}"/>
+    <link rel="stylesheet" href="{% static 'Stylesheets/MyEvents.css' %}"/>
 </head>
 <body>
     <h1>My Events</h1>
     <ul>
-        <li><a>Dashboard</a></li>
-        <li><a>Events</a></li>
-        
+        <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+        <li><a href="{% url 'index' %}">Events</a></li>
     </ul>
 
     <div id="event_table">
@@ -21,9 +20,11 @@
         <input id="search" type="text" placeholder="Search..">
 
         <div id="button">
-          <button type="button" id="plus-btn">
-            + New Event
-          </button>
+          <a href="{% url 'create_event' %}">
+            <button type="button" id="plus-btn">
+              + New Event
+            </button>
+          </a>
         </div>
       </div>
       <table id="events">
@@ -61,4 +62,27 @@
     </div>
     
 </body>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAXgxhyHfYmcAtf8d7G7k8s2SKnM2sf-44",
+    authDomain: "borahae-koffee.firebaseapp.com",
+    projectId: "borahae-koffee",
+    storageBucket: "borahae-koffee.appspot.com",
+    messagingSenderId: "89657985195",
+    appId: "1:89657985195:web:6d484438d84b7ccf5e8fee",
+    measurementId: "G-CDGEGWREY1"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </html>

@@ -20,6 +20,7 @@ body {
     height: 609.81px;
     left: 0;
     top: -165.89px;
+    z-index: -1;
 }
 
 #blob_2 {
@@ -28,6 +29,7 @@ body {
     height: 606.08px;
     right: 0;
     bottom: -40px;
+    z-index: -1;
 }
 
 form {
@@ -42,6 +44,7 @@ form {
     display: flex;
     flex-direction: column;
     justify-content:space-between;
+    z-index: 199;
 }
 
 /* textarea {

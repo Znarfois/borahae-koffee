@@ -23,11 +23,13 @@ li a {
     font-size: x-large;
     text-decoration: none;
     cursor: pointer;
+    transition-duration: 0.5s;
 }
 
 li a:hover {
     background-color: #7B61FF;
     color: white;
+    transition-duration: 0.5s;
 }
 
 body {
