@@ -43,9 +43,10 @@
                         Back
                     </a>
                 </button>
-                <button type="submit" id="submit-btn">
-                    Next
-                </button>
+                <!-- <button type="submit" id="submit-btn"> -->
+                <a href="{% url 'create_reservation' %}">
+                    <button>Next</button>
+                </a>
             </div>
         </form>
         <img src="{% static 'Assets/progress 1.png' %}" alt="" id="progress">
