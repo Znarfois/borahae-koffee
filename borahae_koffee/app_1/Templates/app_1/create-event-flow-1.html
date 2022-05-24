@@ -1,20 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="../../borahae_koffee/static/Assets/Borahae Icon.png" />
+        <link rel="icon" href="{% static 'Assets/Borahae Icon.png' %}" />
         <meta property="og:title" content="Borahae Cafe" />
         <meta developer="Franz Taborlupa" site="https://github.com/Znarfois">
         <title>Borahae Cafe - New Event</title>
-        <link rel="stylesheet" href="../../borahae_koffee/static/Stylesheets/event.css"/>
+        <link rel="stylesheet" href="{% static 'Stylesheets/event.css' %}"/>
     </head>
     <body>
         <!-- <nav>
         </nav> -->
-        <img src="../../borahae_koffee/static/Assets/Blob.png" alt="" id="blob_1">
-        <img src="../../borahae_koffee/static/Assets/Blob_2.png" alt="" id="blob_2">
-        <form method="POST" id="create_event">
+        <img src="{% static 'Assets/Blob.png' %}" alt="" id="blob_1">
+        <img src="{% static 'Assets/Blob_2.png' %}" alt="" id="blob_2">
+        <form method="POST" id="create_event" action="{% url 'create_reservation' %">
             <!-- Get h1 and description from  -->
             <h1>My Event Details</h1>
             <p>Event Title</p>
@@ -38,16 +39,17 @@
             <input type="email" name="reservation_email" value="email"> -->
             <div id="buttons">
                 <button type="button" id="back-btn">
-                    <a href="index.html">
+                    <a href="{% url 'index' %}">
                         Back
                     </a>
                 </button>
-                <button type="submit" id="submit-btn">
-                    Next
-                </button>
+                <!-- <button type="submit" id="submit-btn"> -->
+                <a href="{% url 'create_reservation' %}">
+                    <button>Next</button>
+                </a>
             </div>
         </form>
-        <img src="../../borahae_koffee/static/Assets/progress 1.png" alt="" id="progress">
+        <img src="{% static 'Assets/progress 1.png' %}" alt="" id="progress">
         <!-- <footer>
         </footer> -->
 

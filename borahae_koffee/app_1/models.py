@@ -9,7 +9,9 @@ class Accounts(models.Model):
     FirstName = models.CharField(max_length=255)
     LastName = models.CharField(max_length=255)
     PhoneNumber = models.PositiveSmallIntegerField()
-    EMail = models.CharField(max_length=255)
+    Email = models.CharField(max_length=255)
+
+    objects = models.Manager()
 
 class Event(models.Model):
     EventID = models.PositiveSmallIntegerField(primary_key=True)
@@ -19,6 +21,8 @@ class Event(models.Model):
     EventAvailableSlots = models.PositiveSmallIntegerField()
     EventMaximumCapacity = models.PositiveSmallIntegerField()
     EventTime = models.TimeField()
+
+    objects = models.Manager()
     #Status with DtypeENUM to be made pa as a subclass :)
 
 class Reservation(models.Model):
@@ -32,6 +36,7 @@ class Reservation(models.Model):
     EventID = models.ForeignKey(Event, on_delete=models.CASCADE)
     username = models.ForeignKey(Accounts, on_delete=models.CASCADE)
 
+    objects = models.Manager()
 
 
 #Class Reservation
