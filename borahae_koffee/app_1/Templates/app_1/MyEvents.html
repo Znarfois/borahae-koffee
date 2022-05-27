@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="{% static 'Assets/Borahae Icon.png' %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Events</title>
     <link rel="stylesheet" href="{% static 'Stylesheets/MyEvents.css' %}"/>
@@ -11,6 +12,7 @@
 <body>
     <h1>My Events</h1>
     <ul>
+        <li><img src="{% static 'Assets/Borahae Icon.png' %}" id="logo" alt="logo"></li>
         <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
         <li><a href="{% url 'index' %}">Events</a></li>
     </ul>
@@ -27,6 +29,7 @@
           </a>
         </div>
       </div>
+      <p>{{success}}</p>
       <table id="events">
           <tr>
             <th>Event Name</th>
@@ -39,7 +42,8 @@
             <td>{{e.EventName}}</td>
             <td>{{e.EventStartDate}} - {{e.EventEndDate}}</td>
             <td>{{e.EventStatus}}</td>
-            <td></td>
+            <td><a href="{% url 'update_event' event_id=e.EventID %}"><img src="{% static 'Assets/penicl.png' %}"></a></td>
+            <td><a href="{% url 'delete_event' event_id=e.EventID %}"><img src="{% static 'Assets/trash.png' %}"></a></td>
           </tr>
           <!--
           <tr>

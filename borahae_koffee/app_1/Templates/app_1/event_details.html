@@ -15,49 +15,48 @@
         </nav> -->
         <img src="{% static 'Assets/Blob.png' %}" alt="" id="blob_1">
         <img src="{% static 'Assets/Blob_2.png' %}" alt="" id="blob_2">
-        <form method="POST" id="create_event" action="{% url 'create_event' %}">{% csrf_token %}
-            <!-- Get h1 and description from  -->
+        {%for e in events %}
+        <form method="POST" id="create_event" action="{% url 'update_event' event_id=e.EventID %}">{% csrf_token %}
             <h1>My Event Details</h1>
             <p>Event ID</p>
-            <input type="int" name="event_id" placeholder="ex. 1" required>
+            <input type="int" name="event_id" placeholder="ex. 1" value="{{e.EventID}}" readonly required>
             <p>Event Title</p>
-            <input type="text" name="event_title" placeholder="ex. My Universe" required>
+            <input type="text" name="event_title" placeholder="ex. My Universe" value="{{e.EventName}}" required>
             <p>Event Description</p>
-            <textarea name="event_description" placeholder="Description here" required></textarea>
+            <textarea name="event_description" placeholder="Description here" required>{{e.EventDescription}}</textarea>
             <div id="dates">
                 <div id="left">
                     <p>Start Date</p>
-                    <input type="date" name="event_start_date" value="" required>
+                    <input type="date" name="event_start_date" value="{{e.EventStartDate}}" required>
                 </div>
                 <div id="right">
-                    <p>End Date</p>
-                    <input type="date" name="event_end_date" value="" required>
+                    <p>End Date</p> 
+                    <input type="date" name="event_end_date" value="{{e.EventEndDate}}" required>
                 </div>
             </div>
             <div id="dates">
                 <div id="left">
                     <p>Start Time</p>
-                    <input type="time" name="event_start_time" value="" required>
+                    <input type="time" name="event_start_time" value="{{e.EventStartTime}}" required>
                 </div>
                 <div id="right">
                     <p>End Time</p>
-                    <input type="time" name="event_end_time" value="" required>
+                    <input type="time" name="event_end_time" value="{{e.EventEndTime}}" required>
                 </div>
             </div>
             <p>Expected number of participants</p>
-            <input type="number" name="participants" id="participants" placeholder="ex. 60" required>
+            <input type="number" name="participants" id="participants" placeholder="ex. 60" value="{{e.EventAvailableSlots}}" required>
             <p>Max number of participants</p>
-            <input type="number" name="max_participants" id="participants" placeholder="ex. 60" required>
+            <input type="number" name="max_participants" id="participants" placeholder="ex. 60" value="{{e.EventMaximumCapacity}}" required>
             <p>Status</p>
-            <input type="text" name="status" id="status" placeholder="ex. Planning" required>
+            <input type="text" name="status" id="status" placeholder="ex. Planning" value="{{e.EventStatus}}" required>
             <!-- <input type="text" name="full_name" value="Full Name">
             <input type="text" name="phone_number" value="Phone Number">
             <input type="email" name="reservation_email" value="email"> -->
-            <p>{{ message }}</p>
             <div id="buttons">
                 <button type="button" id="back-btn">
                     <a href="{% url 'index' %}">
-                        Back
+                        Cancel
                     </a>
                 </button>
                 <!-- <button type="submit" id="submit-btn"> -->
@@ -66,7 +65,8 @@
                 <!-- </a> -->
             </div>
         </form>
-        <img src="{% static 'Assets/progress 1.png' %}" alt="" id="progress">
+        {% endfor %}
+        <!-- <img src="{% static 'Assets/progress 1.png' %}" alt="" id="progress"> -->
         <!-- <footer>
         </footer> -->
 

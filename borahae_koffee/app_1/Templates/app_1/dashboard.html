@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Events</title>
-    <link rel="stylesheet" href="{% static 'static/Stylesheets/dashboard.css %'}"/>
+    <link rel="stylesheet" href="{% static 'Stylesheets/dashboard.css' %}"/>
 </head>
 <body>
-  <h1>My Events</h1>
+  <!-- <h1>My Events</h1> -->
   <ul>
-    <li><b>Dashboard<b></li>
-    <li><a>Events</a></li>
-      
-  </ul>
+    <li><img src="{% static 'Assets/Borahae Icon.png' %}" id="logo" alt="logo"></li>
+    <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+    <li><a href="{% url 'index' %}">Events</a></li>
+</ul>
   <div id="firstdash">
     <div id="seconddash">
       <div id="participants">

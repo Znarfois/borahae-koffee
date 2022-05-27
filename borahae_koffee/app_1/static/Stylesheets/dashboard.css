@@ -169,6 +169,11 @@ h3 {
     color: #6E4CC2;
 }
 
+#logo {
+    padding: 20px;
+}
+
+
 h4 {
     position: absolute;
     top: 10%;
