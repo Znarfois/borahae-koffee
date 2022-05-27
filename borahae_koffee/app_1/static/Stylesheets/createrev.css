@@ -119,7 +119,7 @@ h1 {
 }
 
 body {
-    background-image: url("resources/background.png");
+    background-image: url("../Assets/Background.png");
     height: 100vh;
     display: flex;
     align-items: center;

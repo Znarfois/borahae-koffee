@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Reservation Form</title>
-    <link rel="stylesheet" href="{% static 'Stylesheets/createrev.css %'}"/>
+    <link rel="stylesheet" href="{% static 'Stylesheets/createrev.css' %}"/>
 </head>
 <body>
-    <img src="resources/vectoru.png" id="blob_1">
-    <img src="resources/vectord.png" id="blob_2">
+    <img src="{% static 'Assets/Blob.png' %}" id="blob_1">
+    <img src="{% static 'Assets/Blob_2.png' %}" id="blob_2">
     <form method="POST" id="create reservation form">
         <h1>My Universe Cupsleeve Event</h1>
         <p>Join us at Borahae Cafe Davao as we celebrate My Universe Cupsleeve Event on Month Date, Year! To secure
@@ -36,7 +37,7 @@
                 </div>
             </div>
             <input name="event_description" placeholder="Phone Number"></input>
-            <img src="resources/minus.png" id="minus">
+            <img src="{% static 'Assets/minus.png' %}" id="minus">
         </div>
         <div>
             <div class="dropdown">
@@ -48,7 +49,7 @@
                 </div>
             </div>
             <input name="event_description" placeholder="Email"></input>
-            <img src="resources/minus.png" id="minus">
+            <img src="{% static 'Assets/minus.png' %}" id="minus">
         </div>       
         <div id="button">
             <button type="button" id="back-btn">
