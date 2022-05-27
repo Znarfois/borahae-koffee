@@ -20,7 +20,8 @@ from django.http import HttpResponse
 # database = firebase.database()
 
 def index(request):
-    return render(request, 'app_1/MyEvents.html')
+    events = Event.objects.all()
+    return render(request, 'app_1/MyEvents.html', {"events":events})
 
 def create_event(request):
     return render(request, 'app_1/create-event-flow-1.html')
